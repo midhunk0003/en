@@ -28,6 +28,8 @@
 
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+	<!-- google sheet script-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 
 
@@ -37,7 +39,7 @@
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 	<link rel="stylesheet" href="wp-content/themes/Threadsys_twentytwenty/assets/codes/bootstrap.min.css">
 	<!-- <script src="wp-content/themes/Threadsys_twentytwenty/assets/codes/bootstrap.min.js"></script> -->
-	<script src="wp-content/themes/Threadsys_twentytwenty/assets/codes/jquery-3.2.1.slim.min.js"></script>
+	<!-- <script src="wp-content/themes/Threadsys_twentytwenty/assets/codes/jquery-3.2.1.slim.min.js"></script> -->
 	<script src="wp-content/themes/Threadsys_twentytwenty/assets/codes/popper.min.js"></script>
 
 
@@ -2042,13 +2044,71 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14
 	</noscript>
 
 
+<style>
+	#btnScorllToTop{
+		position: fixed;
+		right: 10px;
+        bottom: 10px;
+		width: 50px;
+		height: 50px;
+		border-radius: 50%;
+		background-color: orange;
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+		color: #ffff;
+		outline: none;
+		cursor: pointer;
+		z-index: 99999;
+	}
+	#btnScorllToTop:active{
+		background: #e9c668;
 
+	}
+	#btnScorllToTop i{
+		margin-left: -11px;
+    margin-bottom: 0px;
+    margin-top: -5px;
+	}
+
+	#btnScorllToTop2{
+		position: fixed;
+		right: 10px;
+        bottom: 62px;
+		width: 50px;
+		height: 50px;
+		border-radius: 50%;
+		background-color: rgb(14, 228, 25);
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+		color: #ffff;
+		outline: none;
+		cursor: pointer;
+		z-index: 99999;
+	}
+	#btnScorllToTop2:active{
+		background: #e9c668;
+
+	}
+	#btnScorllToTop2 a i{
+		margin-left: -13px;
+    font-size: 33px;
+    margin-top: -10px;
+	color: white;
+	}
+	
+</style>
 
 </head>
-
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
 <body
 	class="home page-template-default page page-id-10 wp-custom-logo singular enable-search-modal missing-post-thumbnail has-no-pagination not-showing-comments show-avatars footer-top-visible wpb-js-composer js-comp-ver-6.6.0 vc_responsive">
-
+         <button id="btnScorllToTop">
+               <i class="material-icons">arrow_upward</i>
+		 </button>
+		 <button id="btnScorllToTop2">
+				<a href="https://api.whatsapp.com/send?phone=+919061666553&text=Hi.." target="_blank">
+					<i class="fa fa-whatsapp" aria-hidden="true"></i>
+				</a>
+	     </button>
 	<a class="skip-link screen-reader-text" href="#site-content">Skip to the content</a><svg
 		xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none"
 		style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
@@ -2190,13 +2250,14 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14
 					<div class="col-4 foot-cre1">
 						<div class="info-icon">
 							<div class="socbox">
-								<a href="https://www.facebook.com/KBN-builders-kadampuzha-101449165414443/"
+								<a href="https://www.facebook.com/Whitfieldinterior"
 									target="_blank"><img
 										src="wp-content/themes/Threadsys_twentytwenty/assets/images/icons/FBW.png"></a>
-								<a href="https://www.instagram.com/kbnbuilders/" target="_blank"><img
+								<a href="https://www.instagram.com/whitfield_interiors/" target="_blank"><img
 										src="wp-content/themes/Threadsys_twentytwenty/assets/images/icons/INSTA.png"></a>
-								<a href="https://www.youtube.com/channel/UCyUNuvD_y4NihT2_pOZWiCw" target="_blank"><img
-										src="wp-content/uploads/2021/04/home-whatsapp.png"></a>
+
+								<a href="https://api.whatsapp.com/send?phone=+919061666553&text=Hi.." target="_blank"><img
+										src="wp-content/uploads/2021/04/home-whatsapp.png"></a>		
 							</div>
 						</div>
 
@@ -2835,30 +2896,50 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14
 												<figure class="wpb_wrapper vc_figure" style="background: orange;
 												padding: 25px!important;">
 													<!-- <div class="vc_single_image-wrapper   vc_box_border_grey"> -->
-															<form>
+															<form id="submit-form" action="">
 																<div class="form-group">
-																    <input class="form-control homepageform" type="text" placeholder="YOUR NAME">
+																    <input class="form-control homepageform" name="name" type="text" placeholder="YOUR NAME">
 															    </div>
 																<div class="form-group">
-																	<input class="form-control homepageform" type="text" placeholder="PHONE NO">
+																	<input class="form-control homepageform" name="phone" type="text" placeholder="PHONE NO">
 																</div>
 																<div class="form-group">
-																	<input class="form-control homepageform" type="text" placeholder="EMAIL ADDRESS">
+																	<input class="form-control homepageform" name="email" type="text" placeholder="EMAIL ADDRESS">
 																</div>
 																<div class="form-group">
-																	<input class="form-control homepageform" type="text" placeholder="SERVICES NEEDED">
+																	<input class="form-control homepageform" name="services" type="text" placeholder="SERVICES NEEDED">
+																</div>
+																<div class="form-group"> 
+																	<input class="form-control homepageform" type="text" name="address" placeholder="ADDRESS/CITY/STATE/ZIP CODE">
 																</div>
 																<div class="form-group">
-																	<input class="form-control homepageform" type="text" placeholder="ADDRESS/CITY/STATE/ZIP CODE">
+																	<textarea placeholder="MESSAGE" name="message" class="homepageform"></textarea>
 																</div>
 																<div class="form-group">
-																	<textarea placeholder="MESSAGE" class="homepageform"></textarea>
-																</div>
-																<div class="form-group">
-																	<button style="    background-color: white!important;
+																	<button style="background-color: white!important;
 																	color: black!important;"  class="form-control">SUBMIT</button>
 																</div>
 															</form>
+															<script>
+																$("#submit-form").submit((e)=>{
+																	alert('please click ok to submit');
+																	e.preventDefault()
+																	$.ajax({
+																		url:"https://script.google.com/macros/s/AKfycbz-uppixv2XGUMfADoPd-P3qEl3VgXRX5LPDU98BZwSYEODggMubs_cM1vyX031TQyCNQ/exec",
+																		data:$("#submit-form").serialize(),
+																		method:"post",
+																		success:function (response){
+																			alert("Form submitted successfully")
+																			window.location.reload()
+																			//window.location.href="https://google.com"
+																		},
+																		error:function (err){
+																			alert("Something Error")
+															
+																		}
+																	});
+																});
+															</script>
 														<!-- <img
 															width="444" height="491"
 															src="wp-content/uploads/2021/04/home-abt-img.png"
@@ -3196,10 +3277,8 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14
 																sed do eiusmod tempor incididunt ut labore et dolore
 																magna aliqua. Quis ipsumccufacilisis. </p>
 
-															<a href="">Read More
-                                                                                                                     
-														        </a>
-															 <!--services/index.html -->
+															<a href="services/index.html">Read More
+															</a>
 															<!-- http://www.kbn.threadsys.in/en/services/ -->
 
 														</div>
@@ -3227,9 +3306,8 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14
 																sed do eiusmod tempor incididunt ut labore et dolore
 																magna aliqua. Quis ipsumccufacilisis. </p>
 
-															<a href="">Read More
+															<a href="services/index.html">Read More
 															</a>
-															 <!--services/index.html -->
 															<!-- http://www.kbn.threadsys.in/en/services/ -->
 
 														</div>
@@ -3257,9 +3335,8 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14
 																sed do eiusmod tempor incididunt ut labore et dolore
 																magna aliqua. Quis ipsumccufacilisis. </p>
 
-															<a href="">Read More
+															<a href="services/index.html">Read More
 															</a>
-															 <!--services/index.html -->
 															<!-- http://www.kbn.threadsys.in/en/services/ -->
 
 														</div>
@@ -3281,8 +3358,7 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14
 										<div class="wpb_wrapper">
 											<div class="wpb_raw_code wpb_content_element wpb_raw_html serin-cl">
 												<div class="wpb_wrapper">
-													 <!--services/index.html -->
-													<a href="">
+													<a href="services/index.html">
 														<!-- http://www.kbn.threadsys.in/en/services/ -->
 														<div class="serin-blk">
 															<img src="wp-content/uploads/2021/04/srvs-2-img.jpg">
@@ -3306,8 +3382,7 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14
 										<div class="wpb_wrapper">
 											<div class="wpb_raw_code wpb_content_element wpb_raw_html serin-cl">
 												<div class="wpb_wrapper">
-													 <!--services/index.html -->
-													<a href="">
+													<a href="services/index.html">
 														<!-- http://www.kbn.threadsys.in/en/services/ -->
 														<div class="serin-blk">
 															<img src="wp-content/uploads/2021/04/srvs-2-img.jpg">
@@ -3331,8 +3406,7 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14
 										<div class="wpb_wrapper">
 											<div class="wpb_raw_code wpb_content_element wpb_raw_html serin-cl">
 												<div class="wpb_wrapper">
-													 <!--services/index.html -->
-													<a href="">
+													<a href="services/index.html">
 														<!-- http://www.kbn.threadsys.in/en/services/ -->
 														<div class="serin-blk">
 															<img src="wp-content/uploads/2021/04/srvs-2-img.jpg">
@@ -3356,8 +3430,7 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14
 										<div class="wpb_wrapper">
 											<div class="wpb_raw_code wpb_content_element wpb_raw_html serin-cl">
 												<div class="wpb_wrapper">
-													 <!--services/index.html -->
-													<a href="">
+													<a href="services/index.html">
 														<!-- http://www.kbn.threadsys.in/en/services/ -->
 														<div class="serin-blk">
 															<img src="wp-content/uploads/2021/04/srvs-2-img.jpg">
@@ -4005,9 +4078,9 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14
 
 				<center>
 					<div class="socbox on-mobs">
-						<a href="https://www.facebook.com/KBN-builders-kadampuzha-101449165414443/"><img
+						<a href="https://www.facebook.com/Whitfieldinterior"><img
 								src="wp-content/themes/Threadsys_twentytwenty/assets/images/icons/FBW.png"></a> <a
-							href="https://www.instagram.com/kbnbuilders/"><img
+							href="https://www.instagram.com/whitfield_interiors/"><img
 								src="wp-content/themes/Threadsys_twentytwenty/assets/images/icons/INSTA.png"></a>
 					</div>
 				</center>
@@ -4029,12 +4102,13 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14
 					<div class="col-4 foot-cre1">
 						<div class="info-icon">
 							<div class="socbox">
-								<a href="https://www.facebook.com/KBN-builders-kadampuzha-101449165414443/"
+								<a href="https://www.facebook.com/Whitfieldinterior"
 									target="_blank"><img
 										src="wp-content/themes/Threadsys_twentytwenty/assets/images/icons/FBW.png"></a>
-								<a href="https://www.instagram.com/kbnbuilders/" target="_blank"><img
+								<a href="https://www.instagram.com/whitfield_interiors/" target="_blank"><img
 										src="wp-content/themes/Threadsys_twentytwenty/assets/images/icons/INSTA.png"></a>
-								<a href="https://www.youtube.com/channel/UCyUNuvD_y4NihT2_pOZWiCw" target="_blank"><img
+
+								<a href="https://api.whatsapp.com/send?phone=+919061666553&text=Hi.." target="_blank"><img
 										src="wp-content/uploads/2021/04/home-whatsapp.png"></a>
 							</div>
 						</div>
@@ -4076,6 +4150,16 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14
 			errorMessage = "<span style='font-size:16px;color:#BC0C06;'>" + errorMessage + "</span>";
 			jQuery(sliderID).show().html(errorMessage);
 		}
+	</script>
+	<script>
+		const btnScorllToTop = document.querySelector("#btnScorllToTop");
+		btnScorllToTop.addEventListener("click",function(){
+           window.scrollTo({
+			top:0,
+			left:0,
+			behavior:"smooth",
+		   })
+		});
 	</script>
 	<link rel='stylesheet' id='tss-owl-carousel-css'
 		href='wp-content/plugins/testimonial-slider-and-showcase/assets/vendor/owl-carousel/owl.carousel.min2dd6.css?ver=1670491080'
